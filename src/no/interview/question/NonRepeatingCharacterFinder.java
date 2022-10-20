@@ -68,7 +68,7 @@ public class NonRepeatingCharacterFinder {
 		
 		String example = "aaabbeccdfgfg";
 		String example2 = "abbeccdfgfga";
-		String example3 = "abbccdfgfga";
+		String example3 = "abbccddfgfga";
 		String empty = "";
 		
 		char expectedE = NonRepeatingCharacterFinder.findFirstNonRepeatingCharacterBetter(example);
