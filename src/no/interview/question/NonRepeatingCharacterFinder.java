@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class NonRepeatingCharacterFinder {
 
 	/**
-	 * Implementation with O(k) running time 
+	 * Implementation with O(n) running time 
 	 * 
 	 * @param input
 	 * @return
