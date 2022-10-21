@@ -1,9 +1,16 @@
-package no.interview.question;
+package leetcode.hashmap;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 
+/**
+ * When to use hashmap:
+ * Using HashMap makes sense only when unique keys are available for the data we want to store. 
+ * We should use it when searching for items based on a key and quick access time is an important requirement.
+ * @author endre
+ *
+ */
 public class NonRepeatingCharacterFinder {
 
 	/**
