@@ -1,6 +1,6 @@
-package leetcode;
+package leetcode.hashmap;
 
-import java.util.Arrays;
+import java.util.*;
 
 
 public class TwoSums {
@@ -12,7 +12,7 @@ public class TwoSums {
 	public void doTest() {
 		int[] nums = { 2, 7, 11, 15 };
 		int target = 9;
-		int[] t = twoSum(nums, target);
+		int[] t = twoSumFaster(nums, target);
 		
 		nums = null;
 		int[] nums2 = {3, 2, 4};
@@ -60,5 +60,21 @@ public class TwoSums {
 		}
 		return output;
 	}
+	
+	/*
+	 * 1. Put each x in Map
+	 * Using x+y= target where index of y > index of x
+	 * 2. x = target - y exists in map  
+	 */
+    public int[] twoSumFaster(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            if(map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[]{};
+    }
 }
 
